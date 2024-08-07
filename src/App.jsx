@@ -3,9 +3,10 @@ import './Css/global.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Context from './Context/Context';
+import Loader from './components/Loader';
 
 const App = () => {
-    const {setHiddNavs} = Context()
+    const {setHiddNavs, loader} = Context()
 
     return (
         <>
@@ -14,6 +15,7 @@ const App = () => {
                 <Outlet />
             </section>
             <Footer />
+            <Loader display={loader}/>
         </>
     )
 }

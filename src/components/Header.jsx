@@ -8,10 +8,10 @@ import Context from '../Context/Context';
 
 const Header = () => {
     const navigate = useNavigate();
-    const { hidNavs, setHiddNavs } = Context();
+    const { hidNavs, setHiddNavs, settingloader } = Context();
     const location = useLocation()
 
-    
+
 
     return (
         <header className="header bg-primary" onClick={(e) => setHiddNavs(e)}>
@@ -21,29 +21,33 @@ const Header = () => {
 
             <nav>
                 <ul className="show-navs">
-                    <li className="navigators">
-                        <Link to='' className={`links ${location.pathname === '/'?'active':''}`}>
+                    <li className="navigators" >
+                        <Link className={`links ${location.pathname === '/' ? 'active' : ''}`}
+                            onClick={() => { settingloader(); setTimeout(() => navigate(''), 700); }}>
                             <span className="hid-nav">
                                 Home
                             </span>
                         </Link>
                     </li>
-                    <li className="navigators">
-                        <Link to='/about' className={`links ${location.pathname === '/about'?'active':''}`}>
+                    <li className="navigators" >
+                        <Link onClick={() => {  settingloader(); setTimeout(() => navigate('/about'), 700); }}
+                            className={`links ${location.pathname === '/about' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 About
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='/gallery' className={`links ${location.pathname === '/gallery'?'active':''}`}>
+                        <Link onClick={() => { setTimeout(() => navigate('/gallery'), 700); settingloader() }}
+                            className={`links ${location.pathname === '/gallery' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 Gallery
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='/contacts' className={`links ${location.pathname === '/contacts'?'active':''}`}>
+                        <Link onClick={() => { setTimeout(() => navigate('/contacts'), 700); settingloader() }}
+                            className={`links ${location.pathname === '/contacts' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 Contacts
                             </span>
@@ -56,32 +60,40 @@ const Header = () => {
             <nav className="ham">
                 <span className="hambar" onClick={(e) => setHiddNavs(e, 'ham')}>
                     <span className='fixSvg'></span>
-                   {hidNavs? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
+                    {hidNavs ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
                 </span>
                 <ul className="hid-navs" style={{ display: hidNavs ? 'flex' : 'none' }}>
                     <li className="navigators">
-                        <Link to='' className={`links ${location.pathname === '/'?'active':''}`}>
+                        <Link
+                            onClick={() => { settingloader(); setTimeout(() => navigate(''), 1010) }}
+                            className={`links ${location.pathname === '/' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 Home
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='about' className={`links ${location.pathname === '/about'?'active':''}`}>
+                        <Link
+                            onClick={() => { settingloader(); setTimeout(() => navigate('/about'), 1010) }}
+                            className={`links ${location.pathname === '/about' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 About
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='gallery' className={`links ${location.pathname === '/gallery'?'active':''}`}>
+                        <Link
+                            onClick={() => { settingloader(); setTimeout(() => navigate('/gallery'), 1010) }}
+                            className={`links ${location.pathname === '/gallery' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 Gallery
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='contacts' className={`links ${location.pathname === '/contacts'?'active':''}`}>
+                        <Link
+                            onClick={() => { settingloader(); setTimeout(() => navigate('/contacts'), 1010) }}
+                            className={`links ${location.pathname === '/contacts' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 Contacts
                             </span>

@@ -4,6 +4,7 @@ import store from "./store"
 
 const Provider = ({ children }) => {
     let [hidNavs, setHidNavs] = React.useState(false)
+    const [loader, setLoader] = React.useState('none')
     const images = [
         { img: 'https://images.pexels.com/photos/541670/pexels-photo-541670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
         { img: 'https://images.pexels.com/photos/27301121/pexels-photo-27301121/free-photo-of-forest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -19,17 +20,22 @@ const Provider = ({ children }) => {
     ]
 
     const setHiddNavs = (e) => {
-
         if (e.target.className === 'fixSvg') {
             setHidNavs(!hidNavs);
         } else {
             setHidNavs(false)
         }
-
     }
 
+    function settingloader(){
+        setLoader('grid');
+        setTimeout(()=>setLoader('none'), 900);
+    }
+
+
+
     return (
-        <store.Provider value={{ hidNavs, setHiddNavs, images }}>
+        <store.Provider value={{ hidNavs, setHiddNavs, images, loader, settingloader }}>
             {children}
         </store.Provider>
     )

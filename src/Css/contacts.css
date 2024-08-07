@@ -112,7 +112,13 @@
     .Contacts .headings,
     .fieldset{
         width: 70vw;
+        box-shadow: none;
     }
+
+    .fieldset{
+        margin-top: 12px;
+    }
+
     .fieldset > legend{
         display: none;
     }
@@ -135,5 +141,40 @@
         gap: 50px;
         box-sizing: content-box;
         padding: 10vh 8vh;
+    }
+
+    .fieldset{
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:411px) {
+    .Contacts{
+        padding: 10px 20px;
+    }
+    .Contacts .headings,
+    .fieldset{
+        display: flex;
+        flex-direction: column;
+        flex-basis:60vw;
+        width: 65vw;
+        gap: 5vh;
+        box-sizing: content-box;
+        padding: 10vh 8vh;
+    }
+    
+    .fieldset input{
+        height: 5vh;
+        font-size: 16px;
+    }
+    .connect-with-me input[type="submit"]{
+        font-size: 14px;
+        width: 100px;
+        align-self: start;
+        color: white;
+    }
+
+    .fieldset{
+        margin-top: 4px;
     }
 }

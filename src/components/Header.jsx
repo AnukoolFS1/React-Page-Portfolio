@@ -11,7 +11,6 @@ const Header = () => {
     const { hidNavs, setHiddNavs } = Context();
     const location = useLocation()
 
-    console.log(location);
     
 
     return (
@@ -61,28 +60,28 @@ const Header = () => {
                 </span>
                 <ul className="hid-navs" style={{ display: hidNavs ? 'flex' : 'none' }}>
                     <li className="navigators">
-                        <Link to='' className="links">
+                        <Link to='' className={`links ${location.pathname === '/'?'active':''}`}>
                             <span className="hid-nav">
                                 Home
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='about' className="links">
+                        <Link to='about' className={`links ${location.pathname === '/about'?'active':''}`}>
                             <span className="hid-nav">
                                 About
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='gallery' className="links">
+                        <Link to='gallery' className={`links ${location.pathname === '/gallery'?'active':''}`}>
                             <span className="hid-nav">
                                 Gallery
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='contacts' className="links">
+                        <Link to='contacts' className={`links ${location.pathname === '/contacts'?'active':''}`}>
                             <span className="hid-nav">
                                 Contacts
                             </span>

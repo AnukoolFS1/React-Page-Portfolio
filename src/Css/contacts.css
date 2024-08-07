@@ -64,7 +64,7 @@
     gap: 8px;
 }
 
-.connect-with-me input[type="submit"] {
+.connect-with-me input[type="button"] {
     border: none;
     border-radius: 20px;
     font-size: 18px;
@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 
-.connect-with-me input[type="submit"]:hover {
+.connect-with-me input[type="button"]:hover {
     background-color: #010949;
     color: white;
 }
@@ -167,7 +167,7 @@
         height: 5vh;
         font-size: 16px;
     }
-    .connect-with-me input[type="submit"]{
+    .connect-with-me input[type="button"]{
         font-size: 14px;
         width: 100px;
         align-self: start;

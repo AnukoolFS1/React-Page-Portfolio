@@ -1,14 +1,18 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import '../Css/header.css'
-import Context from '../Context/Context'
+import Context from '../Context/Context';
 
 const Header = () => {
     const navigate = useNavigate();
     const { hidNavs, setHiddNavs } = Context();
+    const location = useLocation()
+
+    console.log(location);
+    
 
     return (
         <header className="header bg-primary" onClick={(e) => setHiddNavs(e)}>
@@ -19,28 +23,28 @@ const Header = () => {
             <nav>
                 <ul className="show-navs">
                     <li className="navigators">
-                        <Link to='' className="links">
+                        <Link to='' className={`links ${location.pathname === '/'?'active':''}`}>
                             <span className="hid-nav">
                                 Home
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='about' className="links">
+                        <Link to='/about' className={`links ${location.pathname === '/about'?'active':''}`}>
                             <span className="hid-nav">
                                 About
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='gallery' className="links">
+                        <Link to='/gallery' className={`links ${location.pathname === '/gallery'?'active':''}`}>
                             <span className="hid-nav">
                                 Gallery
                             </span>
                         </Link>
                     </li>
                     <li className="navigators">
-                        <Link to='contacts' className="links">
+                        <Link to='/contacts' className={`links ${location.pathname === '/contacts'?'active':''}`}>
                             <span className="hid-nav">
                                 Contacts
                             </span>

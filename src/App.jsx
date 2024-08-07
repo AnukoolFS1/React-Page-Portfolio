@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom';
 import './Css/global.css'
-import bgImg from '../src/assets/images/sunset.jpg'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Context from './Context/Context';

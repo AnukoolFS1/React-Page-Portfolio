@@ -1,0 +1,155 @@
+.abouts {
+    padding: var(--secPadding);
+    height: 140vh;
+}
+
+.heading1 {
+    background-color: #1e2735;
+    width: 60vw;
+    top: 120px;
+    left: 10vw;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    gap: 8vh;
+}
+
+.heading1,
+.heading2 {
+    border: 1px solid black;
+    position: absolute;
+    padding: 50px 100px 80px;
+    box-shadow: 2px 2px 15px black;
+    transition: all .1s linear;
+    animation: into .5s 1 forwards linear;
+}
+
+.heading2 {
+    background-color: #0f2952;
+    top: 200px;
+    right: 10vw;
+    width: 60vw;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 3vh;
+}
+
+.com-p {
+    text-align: justify;
+}
+
+.heading2 h1 {
+    text-align: right;
+}
+
+.abt-cntnt1 {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.abt-cntnt1 .ab-p {
+    flex-basis: 100px;
+    width: 100%;
+}
+
+.abt-cntnt2 {
+    display: flex;
+    gap: 20px;
+    animation: home-p .5s 1 forwards linear;
+}
+
+.abt-cntnt2 img {
+    width: 25vw;
+    height: 70vh;
+    animation: home-h1 .5s 1 forwards linear;
+}
+
+.abt-cntnt2 div {
+    display: flex;
+    flex-flow: column;
+    gap: 5vh;
+    color: whitesmoke;
+    font-family: Poppins;
+}
+
+.abt-cntnt2 div h2 {
+    color: white;
+}
+
+.Cntct-btn {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: cornflowerblue;
+    margin-top: 5vh;
+    cursor: pointer;
+    align-self: start;
+    font-size: 20px;
+}
+
+.Cntct-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 1087px) {
+    .abouts {
+        height: 150vh;
+    }
+
+    .ab-h1 {
+        font-size: 25px;
+    }
+
+    .abt-cntnt2 img {
+        width: 23vw;
+        height: 70vh;
+    }
+
+    .ab-p {
+        font-size: 15px;
+        align-items: start;
+    }
+
+    .abt-cntnt2 div {
+        gap: 3vh;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    .abouts{
+        height: auto;
+    }
+    .abouts>div {
+        width: 70vw;
+        padding: 50px 50px 80px;
+    }
+
+    .heading2,
+    .heading1 {
+        position: static;
+    }
+}
+
+@media (max-width: 650px){
+    .abt-cntnt2{
+        flex-direction: column;
+    }
+    .abt-cntnt2 img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 530px){
+    .abouts{
+        padding: 20px 8vw;
+    }
+    .abouts .heading1, .abouts .heading2{
+        width: 99%;
+        box-shadow: none;
+    }
+}

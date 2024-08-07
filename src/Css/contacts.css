@@ -1,0 +1,139 @@
+.Contacts {
+    padding: var(--secPadding);
+    height: 120vh;
+    position: relative;
+}
+
+.Contacts .headings {
+    width: 45vw;
+    position: absolute;
+    color: white;
+    padding: 10vh;
+}
+
+.fieldset {
+    padding: 10vh;
+    border: none;
+    width: 40vw;
+    background-color: #1e2735;
+    top: 200px;
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+    box-shadow: 2px 2px 15px black;
+}
+
+.contact-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-list li {
+    font-family: Poppins-Bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-list li span{
+    display: flex;
+    gap: 10px;
+}
+
+.contact-list li svg {
+    font-size: 30px;
+}
+
+.fieldset>legend {
+    text-align: right;
+    font-family: Poppins-Bold;
+    font-size: 40px;
+    color: white;
+}
+
+.fieldset > .com-h1{
+    display: none;
+}
+
+.connect-with-me {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.connect-with-me input[type="button"] {
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 10vw;
+    align-self: end;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.connect-with-me input[type="button"]:hover {
+    background-color: #010949;
+    color: white;
+}
+
+.connect-with-me input,
+.connect-with-me textarea {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.connect-with-me input {
+    height: 8vh;
+}
+
+@media (max-width:1210px) {
+    .Contacts {
+        height: auto;
+    }
+
+    .fieldset>legend {
+        font-size: 25px;
+        white-space: pre;
+    }
+
+    .Contacts .headings,
+    .fieldset {
+        position: static;
+    }
+}
+
+@media (max-width:1080px) {
+    .Contacts .headings,
+    .fieldset{
+        width: 70vw;
+    }
+    .fieldset > legend{
+        display: none;
+    }
+    .fieldset > .com-h1{
+        display: block;
+    }
+
+    .fieldset>legend {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:550px) {
+    .Contacts{
+        padding: 10px 20px;
+    }
+    .Contacts .headings,
+    .fieldset{
+        flex-basis:80vw;
+        gap: 50px;
+        box-sizing: content-box;
+        padding: 10vh 8vh;
+    }
+}

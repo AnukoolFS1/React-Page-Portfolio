@@ -1,0 +1,138 @@
+/* header --------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e2735;
+    font-family: system-ui;
+}
+
+/* logo------------------ */
+.logo {
+    color: orange;
+    cursor: pointer;
+}
+
+.logo span {
+    color: orangered;
+}
+
+/* navs -------------------- */
+
+.header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: .2s linear all;
+    font-size: 19px;
+}
+
+.icon-head {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.links:hover {
+    background-color: #f5f5f599;
+    color: black;
+}
+
+/* nav styling for media --------------- */
+
+.ham {
+    display: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.ham .hid-navs {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    z-index: 1;
+    flex-direction: column;
+    background-color: #303d54;
+    align-items: center;
+    padding: 0;
+    gap: 4px;
+    width: 300px;
+    box-shadow: -3px 3px 10px black;
+    animation: hid-navs .2s 1 forwards linear;
+}
+
+.ham .hid-navs .links {
+    text-align: center;
+    border-radius: 0px;
+}
+
+.ham .hid-navs .links:hover {
+    transform: translateY(-2px);
+}
+
+.ham .hid-navs>.navigators,
+.ham .hid-navs .links {
+    width: 100%;
+}
+
+.hambar {
+    font-size: 25px;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.hambar .fixSvg {
+    position: absolute;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.hambar:hover {
+    background-color: #f5f5f599;
+}
+
+/* animation for hambar navs ------------- */
+
+@keyframes hid-navs {
+    from {
+        transform: translateY(30px);
+        opacity: .1;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* resoponsive navs--------------- */
+
+@media (max-width:768px) {
+    .ham {
+        display: block;
+    }
+
+    header .show-navs {
+        display: none;
+    }
+}

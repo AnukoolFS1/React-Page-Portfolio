@@ -38,7 +38,7 @@
     gap: 12px;
 }
 
-.contact-list li span{
+.contact-list li span {
     display: flex;
     gap: 10px;
 }
@@ -54,7 +54,7 @@
     color: white;
 }
 
-.fieldset > .com-h1{
+.fieldset>.com-h1 {
     display: none;
 }
 
@@ -105,76 +105,119 @@
     .Contacts .headings,
     .fieldset {
         position: static;
+        width: 50vw;
+    }
+    .fieldset{
+        margin-top: 10vh;
     }
 }
 
 @media (max-width:1080px) {
+
     .Contacts .headings,
-    .fieldset{
+    .fieldset {
         width: 70vw;
         box-shadow: none;
     }
 
-    .fieldset{
-        margin-top: 12px;
-    }
-
-    .fieldset > legend{
-        display: none;
-    }
-    .fieldset > .com-h1{
-        display: block;
+    .fieldset {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 
     .fieldset>legend {
-        font-size: 30px;
+        display: none;
+    }
+
+    .fieldset>.com-h1 {
+        display: block;
+    }
+
+    .connect-with-me input[type="button"] {
+        width: 100px;
+        color: white;
+    }
+}
+
+@media (max-width:1080px) {
+    .fieldset>.com-h1 {
+        font-size: 35px;
     }
 }
 
 @media (max-width:550px) {
-    .Contacts{
+    .Contacts {
         padding: 10px 20px;
     }
+
     .Contacts .headings,
-    .fieldset{
-        flex-basis:80vw;
+    .fieldset {
+        flex-basis: 80vw;
         gap: 50px;
         box-sizing: content-box;
         padding: 10vh 8vh;
     }
 
-    .fieldset{
+    .fieldset {
         margin-top: 8px;
     }
-}
 
-@media (max-width:411px) {
-    .Contacts{
-        padding: 10px 20px;
-    }
-    .Contacts .headings,
-    .fieldset{
-        display: flex;
-        flex-direction: column;
-        flex-basis:60vw;
-        width: 65vw;
-        gap: 5vh;
-        box-sizing: content-box;
-        padding: 10vh 8vh;
-    }
-    
-    .fieldset input{
+    .fieldset input {
         height: 5vh;
         font-size: 16px;
     }
-    .connect-with-me input[type="button"]{
+
+    .connect-with-me input[type="button"] {
         font-size: 14px;
         width: 100px;
         align-self: start;
         color: white;
     }
 
-    .fieldset{
+}
+
+@media (max-width:450px) {
+    .Contacts {
+        padding: 10px 20px;
+    }
+
+    .Contacts .headings,
+    .fieldset {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60vw;
+        width: 60vw;
+        gap: 5vh;
+        box-sizing: content-box;
+    }
+
+    .fieldset {
         margin-top: 4px;
     }
+
+    .contact-list li{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width:395px) {
+    .Contacts {
+        padding: 10px 0;
+    }
+    .Contacts .headings,
+    .fieldset {
+        padding: 5vh 8vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-basis: 55vw;
+        width: 55vw;
+        gap: 2.5vh;
+        box-sizing: content-box;
+        margin: 0px auto;
+    }
+
 }

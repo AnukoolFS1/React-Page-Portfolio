@@ -21,6 +21,7 @@
     top: 15vh;
     right: 10vw;
     box-shadow: 2px 2px 15px black;
+    animation: fieldset .3s 1 forwards linear;
 }
 
 .contact-list {
@@ -90,6 +91,21 @@
 
 .connect-with-me input {
     height: 8vh;
+}
+
+@keyframes fieldset{
+    0%{
+        transform: translateY(100px);
+        opacity: 0.1;
+    }
+    50%{
+        transform: traslateY(0px);
+        opacity: .3;
+    }
+    100%{
+        transform: traslateY(0px);
+        opacity: 1;
+    }
 }
 
 @media (max-width:1210px) {

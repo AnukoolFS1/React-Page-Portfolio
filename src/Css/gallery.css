@@ -35,6 +35,25 @@
 .galleries > article > img:nth-child(even){
     animation: img-even .5s 1 forwards linear;
 }
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.projects > div{
+    display: flex;
+    flex-direction: column;
+}
+.projects iframe{
+    width: 50vw;
+}
+
+.projects iframe::-webkit-scrollbar{
+    background-color: red;
+}
+
 @keyframes img-odd {
     from{
         transform: translate(-100px, 100px);

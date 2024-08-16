@@ -13,7 +13,9 @@ const Gallery = () => {
             <article className='projects'>
                 <div>
                     <label> Static Web Page </label>
-                    <iframe id='gpPage' src="../src/BootstrapMadeGP/index.html" frameborder="0" height='700px' width='700px'></iframe>
+                    <a href="../src/BootstrapMadeGP/index.html" target='_blank'>vb
+                        <iframe id='gpPage' src="../src/BootstrapMadeGP/index.html" frameborder="0" height='700px' width='700px'></iframe>
+                    </a>
                 </div>
                 <div>
                     <label> Calculator </label>

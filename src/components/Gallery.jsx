@@ -12,10 +12,8 @@ const Gallery = () => {
             <h3>Projects</h3>
             <article className='projects'>
                 <div>
-                    <label> Static Web Page </label>
-                    <a href="../src/BootstrapMadeGP/index.html" target='_blank'>vb
+                    <a href="https://66bf9e99c248989016946bd2--papaya-cannoli-f75b68.netlify.app/" target='_blank'>  Static Web Page  </a>
                         <iframe id='gpPage' src="../src/BootstrapMadeGP/index.html" frameborder="0" height='700px' width='700px'></iframe>
-                    </a>
                 </div>
                 <div>
                     <label> Calculator </label>

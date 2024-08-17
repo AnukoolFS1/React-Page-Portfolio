@@ -7,7 +7,7 @@ const Gallery = () => {
     return (
         <section className="galleries" >
             <h1 className='com-h1'>Gallery</h1>
-            <p className='com-p'>Check all the Images</p>
+            <p className='com-p'>Check my Projects</p>
 
             <h3>Projects</h3>
             <article className='projects'>

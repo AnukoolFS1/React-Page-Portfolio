@@ -1,12 +1,16 @@
 /* header --------------------- */
 
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #1e2735;
     font-family: system-ui;
+    transition: all .7s linear;
 }
 
 /* logo------------------ */
@@ -32,7 +36,7 @@
     color: white;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 3px;
     transition: .2s linear all;
     font-size: 19px;
 }

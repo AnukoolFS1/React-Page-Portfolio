@@ -5,16 +5,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import '../Css/header.css'
 import Context from '../Context/Context';
+import { width } from '@fortawesome/free-brands-svg-icons/fa42Group'
 
 const Header = () => {
     const navigate = useNavigate();
     const { hidNavs, setHiddNavs, settingloader } = Context();
     const location = useLocation()
+    let [header, setHeader] = React.useState('')
+
+    const position = {
+        boxShadow: '1px 2px 10px #00000080',
+        backgroundColor: '#000000c6'
+    }
 
 
-
+    React.useEffect(() => {
+        window.addEventListener('scroll', (e) => {
+            scrollY > 1 ? setHeader(1) : setHeader(null)
+        })
+    }, [])
     return (
-        <header className="header bg-primary" onClick={(e) => setHiddNavs(e)}>
+        <header className="header bg-primary" onClick={(e) => setHiddNavs(e)} style={header ? position : {}} >
             <nav className='logo' onClick={() => navigate('')}>
                 <h1>PORT<span>FOLIO</span></h1>
             </nav>
@@ -30,7 +41,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="navigators" >
-                        <Link onClick={() => {  settingloader(); setTimeout(() => navigate('/about'), 700); }}
+                        <Link onClick={() => { settingloader(); setTimeout(() => navigate('/about'), 700); }}
                             className={`links ${location.pathname === '/about' ? 'active' : ''}`}>
                             <span className="hid-nav">
                                 About

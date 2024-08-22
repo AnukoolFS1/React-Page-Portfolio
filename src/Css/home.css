@@ -1,26 +1,35 @@
 .homes{
     width: 100vw;
-    animation: into forwards .5s 1 ease-in;
     color: white;
     padding: var(--secPadding);
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    gap: 5rem;
+    /* border: 1px solid black; */
 }
 
 .WD{
     display: inline-block;
     animation: wd 1s infinite linear;
+    background-color: white;
+    background-image: linear-gradient(30deg, red, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .headings{
     flex-basis: 45vw;
+    animation: into forwards .5s 1 ease-in;
     background-color: #1e2735;
     box-shadow: 2px 2px 10px #00000080;
-    padding: 50px 20px;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
+    border-radius: 4px;
+    align-self: center;
 }
 
 .com-h1{
@@ -51,6 +60,18 @@
     top: 75%;
     left: 0;
     border-radius: 50px 50px 0px 0px;
+}
+
+
+.profile-pic{
+    clip-path: circle(50% at 50% 50%);
+}
+
+.profile-pic img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    filter: contrast(1) ;
 }
 
 /* all animations */
@@ -95,7 +116,7 @@
     }
     50%{
         transform: translateY(0px);
-        text-shadow: 0px 0px 0px black;
+        /* text-shadow: 0px 0px 0px black; */
     }
     100%{
         transform: translateY(-5px);

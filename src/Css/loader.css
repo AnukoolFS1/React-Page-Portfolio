@@ -3,6 +3,7 @@
     width: .26vw;
     background-color: rebeccapurple;
     position: fixed;
+    z-index: 10;
     top: calc(50% - 26px);
     left: 50%;
     animation: edgeloader .95s 1 forwards linear;

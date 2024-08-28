@@ -28,7 +28,7 @@ const Provider = ({ children }) => {
     }
 
     function settingloader(){
-        setLoader('grid');
+        setLoader('block');
         setTimeout(()=>setLoader('none'), 900);
     }
 

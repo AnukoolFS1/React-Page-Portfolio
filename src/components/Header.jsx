@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import '../Css/header.css'
 import Context from '../Context/Context';
-import { width } from '@fortawesome/free-brands-svg-icons/fa42Group'
 
 const Header = () => {
     const navigate = useNavigate();

@@ -23,8 +23,8 @@
 }
 
 .galleries > article > img{
-    width: 25vw;
-    height: 35vh;
+    width: 10vw;
+    height: 10vh;
     object-fit: cover;
     object-position: center;
 }
@@ -53,6 +53,30 @@
 .projects iframe::-webkit-scrollbar{
     background-color: red;
 }
+
+.hall-picture{
+    margin: 4.5rem auto;
+    position: relative;
+    width: 50vw;
+    border: 1px solid black;
+    height: 70vh;
+}
+
+.hall-picture img{
+    display: none;
+    width: 50vw;
+    /* border: 1px solid black; */
+}
+
+.hall-picture h1{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 100%;
+}
+
+
+
 
 @keyframes img-odd {
     from{

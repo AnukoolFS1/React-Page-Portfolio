@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import '../Css/gallery.css'
 import Context from '../Context/Context'
 
 const Gallery = () => {
     const { images } = Context()
+    const [src, setSrc] = useState('');
+
+
+    function mousehover(e){
+        setSrc(e.target.src)
+    }
 
     return (
         <section className="galleries" >
@@ -13,18 +20,21 @@ const Gallery = () => {
             <article className='projects'>
                 <div id='static'>
                     <a href="https://66bf9e99c248989016946bd2--papaya-cannoli-f75b68.netlify.app/" target='_blank'>  Static Web Page  </a>
-                    <iframe id='gpPage' src="https://66bf9e99c248989016946bd2--papaya-cannoli-f75b68.netlify.app/" frameborder="0" height='700px' width='700px'></iframe>
+                    <iframe id='gpPage' src="https://66bf9e99c248989016946bd2--papaya-cannoli-f75b68.netlify.app/" frameBorder="0" height='700px' width='700px'></iframe>
                 </div>
                 <div id='calc'>
                     <a href="https://kaleidoscopic-halva-853976.netlify.app/"> Calculator </a>
-                    <iframe src="https://kaleidoscopic-halva-853976.netlify.app/" frameborder="0" height='700px' width='700px'></iframe>
+                    <iframe src="https://kaleidoscopic-halva-853976.netlify.app/" frameBorder="0" height='700px' width='700px'></iframe>
                 </div>
             </article>
 
-
+            <article className='hall-picture'>
+                <h1>Move cursor to an image</h1>
+                <img src={src} alt="" />
+            </article>
             <article className='images'>
                 {images?.map((e, i) => {
-                    return (<img src={e.img} key={i} />)
+                    return (<img src={e.img} key={i} onClick={mousehover} />)
                 })}
             </article>
 

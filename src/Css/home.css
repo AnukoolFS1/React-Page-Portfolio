@@ -3,16 +3,13 @@
     color: white;
     padding: var(--secPadding);
     display: flex;
-    /* flex-wrap: wrap; */
     gap: 5rem;
-    /* border: 1px solid black; */
 }
 
 .WD{
     display: inline-block;
-    animation: wd 1s infinite linear;
     background-color: white;
-    background-image: linear-gradient(30deg, red, blue);
+    background-image: linear-gradient(45deg,blue 10%,red, rebeccapurple 80%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -21,14 +18,14 @@
 .headings{
     flex-basis: 45vw;
     animation: into forwards .5s 1 ease-in;
-    background-color: #1e2735;
+    background-color: #0a1422;
     box-shadow: 2px 2px 10px #00000080;
-    padding: 100px 20px;
+    padding: 100px 100px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 35px;
     align-self: center;
 }
 
@@ -37,12 +34,17 @@
     font-size: 40px;
     color: white;
     animation: home-h1 .5s 1 forwards linear;
+    white-space: pre;
 }
 
 .com-p{
     font-family: Poppins;
     color: antiquewhite;
     animation: home-p .5s 1 forwards linear;
+    background-image: linear-gradient(30deg, orange, aqua);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .name{
@@ -54,7 +56,11 @@
     content: '';
     width: 100%;
     height: 5px;
-    background-color: #1e00ff;
+    /* background-color: #1e00ff; */
+    background-image: linear-gradient(45deg, rgba(255, 166, 0, 0.7) 40%, rgba(0, 255, 0, 0.7));
+    /* background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
     position: absolute;
     z-index: -1;
     top: 75%;

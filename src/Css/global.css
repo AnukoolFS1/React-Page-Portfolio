@@ -24,13 +24,13 @@
 /* Styling the scrollbar */
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: #030f47;
+    width: 8px;
+    background-color: #010d43b7;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #1a76cca9;
-    border-radius: 8px;
+    background-color: #007c92a9;
+    border-radius: 2px;
 }
 
 .main {

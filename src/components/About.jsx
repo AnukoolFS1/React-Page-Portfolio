@@ -25,7 +25,7 @@ const About = () => {
                 style={{
                     top: zIn ? '200px' : '120px',
                     right: zIn ? '10vw' : '',
-                    backgroundColor: zIn ? '#1e2735' : '#0f2952' /*-- setting page animation for changes --*/
+                    backgroundColor: zIn ? '#1e2735' : '#0f2952' 
                 }}>
                 <div className='abt-cntnt1'>
                     <h1 className='abt-hding com-h1 ab-h1'>About</h1>

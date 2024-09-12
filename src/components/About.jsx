@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import Img from '../assets/images/chairs.jpg'
 import '../Css/about.css'
-import { useNavigate, Link } from 'react-router-dom'
 import 'boxicons'
+// import Resume from './Resume'
+import Resumes from './Resumes'
 
 
 const About = () => {
     let [zIn, setZIn] = useState(false)
-    const navigate = useNavigate()
 
     function zUp() { // setting z-index up for about pages
         setZIn(true)
@@ -44,12 +44,25 @@ const About = () => {
             </div>
 
             {/** About rear page */}
-            <div className='heading2'
+           <Resumes/>
+
+
+        </section>
+    )
+}
+
+export default About
+
+
+
+
+/**
+ *  <div className='heading2'
                 style={{
                     zIndex: zIn ? 3 : 1,
                     top: zIn ? '120px' : '200px',
                     left: zIn ? '10vw' : '',
-                    backgroundColor: zIn ? '#0f2952' : '#1e2735' /*-- setting page animation for changes --*/
+                    backgroundColor: zIn ? '#0f2952' : '#1e2735' 
                 }}
                 onClick={zUp}>
                 <h1 className='abt-hding com-h1 ab-h1' style={{ fontSize: zIn ? '' : '2rem' }}>Resume</h1>
@@ -95,28 +108,28 @@ const About = () => {
                             <h3>Skills</h3>
                             <p>Frontend Development</p>
                             <h4>
-                                <span><box-icon type='logo' name='html5' color='#ccff00'></box-icon></span> HTML
+                                 HTML
                             </h4>
                             <h4>
-                                <span><box-icon name='css3' type='logo' color='#ccff00' ></box-icon></span> CSS
+                                 CSS
                             </h4>
                             <h4>
-                                <span><box-icon name='javascript' type='logo' color='#ccff00'></box-icon></span> JavaScript </h4>
+                                 JavaScript </h4>
                             <h4>
-                                <span><box-icon type='logo' name='bootstrap' color='#ccff00'></box-icon></span> Bootstrap
+                                 Bootstrap
                             </h4>
                             <h4>
-                                <span><box-icon name='devices' color='#ccff00'></box-icon></span> Responsive
+                                Responsive
                             </h4>
                             <h4>
-                                <span><box-icon name='react' type='logo' color='#ccff00'></box-icon></span> ReactJS
+                                 ReactJS
                             </h4>
                             <p>Version Control</p>
                             <h4>
-                                <span><box-icon name='git' type='logo' color='#ccff00'></box-icon></span> Git
+                                 Git
                             </h4>
                             <h4>
-                                <span><box-icon name='github' type='logo' color='#ccff00'></box-icon></span> Github
+                                 Github
                             </h4>
                         </article>
                         <article>
@@ -128,10 +141,4 @@ const About = () => {
                 <button className='Cntct-btn' onClick={() => navigate('/contacts')}>Download PDF</button>
 
             </div>
-
-
-        </section>
-    )
-}
-
-export default About
+ */

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import store from "./store"
 
 
@@ -32,10 +32,10 @@ const Provider = ({ children }) => {
         setTimeout(()=>setLoader('none'), 900);
     }
 
-
+    let [zIn, setZIn] = useState(false)
 
     return (
-        <store.Provider value={{ hidNavs, setHiddNavs, images, loader, settingloader }}>
+        <store.Provider value={{ hidNavs, setHiddNavs, images, loader, settingloader, zIn, setZIn }}>
             {children}
         </store.Provider>
     )

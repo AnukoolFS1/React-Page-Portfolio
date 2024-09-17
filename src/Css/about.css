@@ -195,6 +195,7 @@
     cursor: pointer;
     align-self: start;
     font-size: 20px;
+    display: inline-block;
 }
 
 .Cntct-btn:hover {

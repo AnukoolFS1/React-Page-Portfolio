@@ -4,11 +4,11 @@ import Context from '../Context/Context'
 
 const Gallery = () => {
     const { images } = Context()
-    const [src, setSrc] = useState('');
+    const [srcc, setSrc] = useState('');
 
 
     function mousehover(e){
-        setSrc(e.target.src)
+        setSrc(e.target.src);
     }
 
     return (
@@ -30,7 +30,7 @@ const Gallery = () => {
 
             <article className='hall-picture'>
                 <h1>Move cursor to an image</h1>
-                <img src={src} alt="" />
+                <img src={srcc} alt="" className='hall-fame' style={{display:srcc?'block':'none'}}/>
             </article>
             <article className='images'>
                 {images?.map((e, i) => {

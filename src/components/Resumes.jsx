@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../Css/about.css';
 import { useNavigate, Link } from 'react-router-dom';
 import 'boxicons';
@@ -11,22 +11,12 @@ const Resumes = () => {
         {
             title: 'Frontend Development',
             skill: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'ReactJS'],
-            logo: [
-                "<box-icon type='logo' name='html5' color='#ccff00'></box-icon>",
-                `<span><box-icon name='css3' type='logo' color='#ccff00' ></box-icon></span>`,
-                `<span><box-icon name='javascript' type='logo' color='#ccff00'></box-icon></span>`,
-                `<span><box-icon type='logo' name='bootstrap' color='#ccff00'></box-icon></span>`,
-                `<span><box-icon name='devices' color='#ccff00'></box-icon></span>`,
-                `<span><box-icon name='react' type='logo' color='#ccff00'></box-icon></span>`
-            ]
+            logo: ["html5",`css3`,`javascript`,`logo`,`devices`,`react`]
         },
         {
             title: 'Version Control',
             skill: ['Git', 'Github'],
-            logo: [
-                `<span><box-icon name='git' type='logo' color='#ccff00'></box-icon></span>`,
-                `<span><box-icon name='github' type='logo' color='#ccff00'></box-icon></span>`
-            ]
+            logo: ['git','github']
         }
     ]
 
@@ -95,7 +85,7 @@ const Resumes = () => {
                                         {e.skill.map((skill, j) => {
                                             return (
                                                 <React.Fragment key={j}>
-                                                    <h4><span>{e.logo[j]}</span>{skill}</h4>
+                                                    <h4><span><box-icon name={skill} type='logo' color='#ccff00'></box-icon></span>{skill}</h4>
                                                 </React.Fragment>
                                             );
                                         })}
@@ -110,8 +100,7 @@ const Resumes = () => {
                     </article>
                 </section>
             </section>
-            <button className='Cntct-btn' onClick={() => navigate('/contacts')}>Download PDF</button>
-
+            <a className='Cntct-btn' href='./src/assets/Resumeserif_V1.pdf' download={'resume-Anukool'}>Download PDF</a>
         </div>
     </>)
 }

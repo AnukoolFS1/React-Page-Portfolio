@@ -67,7 +67,7 @@
     70% {
         transform: rotate(360deg);
         top: calc(50% - 30px);
-        height: 60px;
+        height: 11vh;
     }
 
     75% {

@@ -62,10 +62,11 @@
     height: 70vh;
 }
 
-.hall-picture img{
-    display: none;
+.hall-picture > .hall-fame{
+    /* display: none; */
     width: 50vw;
-    /* border: 1px solid black; */
+    height: 70vh;
+    object-fit: cover;
 }
 
 .hall-picture h1{

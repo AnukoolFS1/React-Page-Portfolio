@@ -7,7 +7,6 @@
 
 <hr/>
 
-Site : https://ashy-ocean-066dd641e.5.azurestaticapps.net/
 
 <hr/>
 

@@ -48,7 +48,7 @@ const About = () => {
                         </div>
                     </div>
                 </article>
-                <article>
+                <article style={{color:'white', fontFamily:'system-ui'}}>
                     <h2>Call to Action</h2>
                     <p>I'm always excited about collaborating on interesting projects. Feel free to get in touch if you're looking for a developer who is eager to bring your ideas to life!</p>
                 </article>

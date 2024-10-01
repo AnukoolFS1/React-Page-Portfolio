@@ -1,6 +1,6 @@
 .abouts {
     padding: var(--secPadding);
-    height: 150vh;
+    height: 180vh;
 }
 
 .heading1 {
@@ -11,7 +11,11 @@
     z-index: 2;
     display: flex;
     flex-flow: column;
-    gap: 8vh;
+    gap: 6vh;
+}
+
+strong {
+    color: #1aa4ff;
 }
 
 .heading1,
@@ -34,8 +38,9 @@
     font-family: system-ui;
 }
 
-.com-p {
+.abt-p {
     text-align: justify;
+    font-family: Poppins;
 }
 
 .heading2 .ab-h1 {
@@ -56,14 +61,16 @@
     line-height: 1rem;
     margin-bottom: 1rem;
 }
-.table{
+
+.table {
     display: flex;
     gap: 2rem;
 }
 
-.col1{
+.col1 {
     flex: 1 0 60%;
 }
+
 .table article h3 {
     font-family: sans-serif;
     font-weight: 800;
@@ -74,7 +81,7 @@
     position: relative;
 }
 
-.table article h3::after{
+.table article h3::after {
     content: '';
     background-color: #0272bc;
     width: 100%;
@@ -92,11 +99,41 @@
     margin-top: 1rem;
 }
 
-.details{
+.abt-cntnt2 .projects {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.projects ul {
+    list-style-type: square;
+    transform: translateX(1.2rem);
+}
+
+.projects ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.projects ul a:hover{
+    text-decoration: underline;
+}
+
+.linkToGallery{
+    display: inline-block;
+    border-radius: 12px;
+    align-self: start;
+    padding: .6rem;
+    background-color: #0272bc;
+    text-decoration: none;
     color: white;
 }
 
-.table article div p{
+.details {
+    color: white;
+}
+
+.table article div p {
     margin-top: 1rem;
 }
 
@@ -110,17 +147,17 @@
     color: #00ff65;
 }
 
-.table article > div h4 span {
+.table article>div h4 span {
     color: rgb(185, 185, 185);
     font-size: .8rem;
 }
 
-.table article > h4 {
+.table article>h4 {
     line-height: 1.4rem;
     color: #00ff65;
 }
 
-.online-presence a{
+.online-presence a {
     width: fit-content;
     text-decoration: none;
     font-weight: 700;
@@ -129,24 +166,26 @@
     color: dodgerblue;
     gap: .3rem;
 }
-.online-presence a > .linkedin{
+
+.online-presence a>.linkedin {
     transform: translateY(1px);
 }
-.online-presence a > span{
+
+.online-presence a>span {
     transform: translateY(3px);
 }
 
-.table article > h4 span {
+.table article>h4 span {
     font-size: .8rem;
     transform: translateY(6px);
     display: inline-block;
 }
 
-.table article
-.heading2 article{
+.table article .heading2 article {
     color: white;
 }
-.portfolio a{
+
+.portfolio a {
     color: white;
     display: block;
 }
@@ -154,6 +193,16 @@
 .abt-cntnt1 {
     display: flex;
     flex-flow: column wrap;
+    font-family: system-ui;
+    gap: 10px;
+}
+
+.abt-cntnt1 h2 {
+    color: white;
+}
+
+.abt-cntnt1 p {
+    color: white;
 }
 
 .abt-cntnt1 .ab-p {
@@ -164,13 +213,11 @@
 .abt-cntnt2 {
     display: flex;
     gap: 20px;
-    animation: home-p .5s 1 forwards linear;
 }
 
 .abt-cntnt2 img {
     width: 25vw;
     height: 70vh;
-    animation: home-h1 .5s 1 forwards linear;
 }
 
 .abt-cntnt2 div {
@@ -178,7 +225,7 @@
     flex-flow: column;
     gap: 5vh;
     color: whitesmoke;
-    font-family: Poppins;
+    font-family: System-ui;
 }
 
 .abt-cntnt2 div h2 {
@@ -201,6 +248,11 @@
 .Cntct-btn:hover {
     background-color: black;
     color: white;
+}
+
+.logos{
+    display: inline-block;
+    transform: translate(-2px, 5px);
 }
 
 @media (max-width: 1087px) {

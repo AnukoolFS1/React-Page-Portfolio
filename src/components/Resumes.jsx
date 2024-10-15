@@ -14,6 +14,11 @@ const Resumes = () => {
             logo: ["html5", `css3`,`bootstrap`, `javascript`, `devices`, `react`]
         },
         {
+            title: 'Backend Development',
+            skill: ['NodeJS', 'ExpressJS', 'MongoDB'],
+            logo: ['nodejs','nodejs','mongodb']
+        },
+        {
             title: 'Version Control',
             skill: ['Git', 'Github'],
             logo: ['git', 'github']
@@ -38,12 +43,12 @@ const Resumes = () => {
             onClick={zUp}>
             <h1 className='abt-hding com-h1 ab-h1' style={{ fontSize: zIn ? '' : '2rem' }}>Resume</h1>
             <h1 className='title'>Anukool Singh Chauhan</h1>
-            <h2>Frontend Developer</h2>
+            <h2>Full Stack Developer</h2>
             {zIn?<><article className='details'>
                 <p>Fatehpur Beri,</p>
                 <p>New Delhi - 74</p>
                 <p><strong>9560095435</strong></p>
-                <p><strong>anukool26@outlool.com</strong></p>
+                <p><strong>anukool26@outlook.com</strong></p>
             </article>
                 <section className='table' style={{ display: zIn ? 'flex' : 'none' }}>
                     <section className='col1'>

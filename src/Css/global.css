@@ -6,7 +6,7 @@
 
 :root {
     --bgColor: salmon;
-    --secPadding: 10rem 100px;
+    --secPadding: 10rem 2rem;
 }
 
 /* importing fonts Poppins */

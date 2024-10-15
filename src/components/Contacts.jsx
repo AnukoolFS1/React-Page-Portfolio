@@ -26,7 +26,7 @@ const Contacts = () => {
     return (
         <section className='Contacts'>
             <div className='headings'>
-                <h1 className='home-heading com-h1'>Contact Me</h1>
+                <h1 className='home-heading com-h1'>Contact Me {'>'}</h1>
                 
                 <ul className="contact-list">
                     <li>
@@ -41,7 +41,7 @@ const Contacts = () => {
                 </ul>
             </div>
 
-            <fieldset className='fieldset'>
+            {/* <fieldset className='fieldset'>
                 <legend className='home-heading ab-h1'>Connect With Me</legend>
                 <h1 className='com-h1'>Connet with me</h1>
                 <form className='connect-with-me' action='#'>
@@ -50,7 +50,7 @@ const Contacts = () => {
                     <textarea type="text" placeholder='Message' onChange={inputMessage} value={value3} rows='10' />
                     <input type="button" value={'submit'} onClick={()=>{setvalue(''); setvalue2(''); setvalue3('')}} />
                 </form>
-            </fieldset>
+            </fieldset> */}
 
         </section>
     )

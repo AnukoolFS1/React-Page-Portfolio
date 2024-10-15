@@ -3,7 +3,7 @@
     color: white;
     padding: var(--secPadding);
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .WD{
@@ -63,8 +63,10 @@
 }
 
 
-.profile-pic{
-    clip-path: circle(50% at 50% 50%);
+.profile-pic > img{
+    /* clip-path: circle(50% at 50% 50%); */
+    border-radius: 50%;
+    /* border: 10px solid cornflowerblue; */
 }
 
 .profile-pic img{
@@ -132,12 +134,24 @@
     }
 }
 
+@media (max-width:1024px) and (min-width:769px) {
+    .homes{
+        padding: 10px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width:768px) and (min-width:601px) {
     .home-heading{
         font-size: 30px;
     }
     .home-desc{
         font-size: 15px;
+    }
+    .homes{
+        padding: 10px 10px;
+        flex-direction: column;
     }
 }
 
@@ -152,11 +166,16 @@
     .home-desc{
         font-size: 15px;
     }
+    .homes{
+        padding: 10px 10px;
+        flex-direction: column;
+    }
 }
 
 @media (max-width:450px) {
     .homes{
         padding: 10px 10px;
+        flex-direction: column;
     }
     .headings{
         flex-basis:80vw;

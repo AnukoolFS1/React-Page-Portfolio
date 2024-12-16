@@ -1,4 +1,3 @@
-import Img from '../assets/images/aboutImg.jpg'
 import '../Css/about.css'
 import 'boxicons';
 import Context from '../Context/Context';
@@ -29,11 +28,10 @@ const About = () => {
                     <p className='abt-p'>Hi, I'm Anukool, a passionate web developer specializing in front-end and back-end development. With a solid foundation in HTML, CSS, JavaScript, ReactJS, Node.js, Express.js, and MongoDB, I enjoy building dynamic websites that provide a seamless user experience.</p>
                 </div>
                 <article className='abt-cntnt2'>
-                    <img src={Img} alt="img" style={{ objectFit: 'cover' }} />
                     <div>
                         <div>
                             <h2>Skills</h2>
-                            <p className='ab-p'>My expertise includes building responsive websites using <strong>HTML, CSS,</strong> and <strong>JavaScript</strong> frameworks like <strong>ReactJS</strong>. On the back-end, I work with <strong>Node.js, Express.js,</strong> and <strong>MongoDB</strong> to develop functional applications. I also have experience with <strong>Git</strong> for version control and deployment workflows using platforms like Netlify</p>
+                            <p className='ab-p'>My expertise includes building responsive websites using <strong>HTML, CSS,</strong> <strong>JavaScript</strong> and framework like <strong>ReactJS</strong>. On the back-end, I work with <strong>Node.js, Express.js,</strong> and <strong>MongoDB</strong> to develop functional applications. I also have experience with <strong>Git</strong> for version control and deployment workflows using platforms like Netlify</p>
                         </div>
                         <div className='projects'>
                             <h2 className=''>Projects</h2>

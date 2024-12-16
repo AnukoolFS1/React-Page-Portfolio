@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../Css/about.css';
 import { useNavigate, Link } from 'react-router-dom';
 import 'boxicons';
@@ -15,7 +15,7 @@ const Resumes = () => {
         },
         {
             title: 'Backend Development',
-            skill: ['NodeJS', 'ExpressJS', 'MongoDB'],
+            skill: ['Node.JS', 'Express', 'MongoDB'],
             logo: ['nodejs','nodejs','mongodb']
         },
         {
